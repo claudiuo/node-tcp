@@ -2,10 +2,6 @@ var TCPConnected = require('connectedbytcp');
 
 Test = new TCPConnected("192.168.1.61");
 
-// print process.argv
-// process.argv.forEach((val, index) => {
-//   console.log(`${index}: ${val}`);
-// });
 
 if(process.argv.length < 4) {
 	console.log("error - too few args: need room name and state: ON/OFF/DIM");
@@ -25,29 +21,8 @@ if(stateDesired === "dim") {
 
 console.log("stateDesired " + stateDesired);
 
-// TODO try this code first!!!!
-// Test.Init(function (error) {
-// 	if(!error) {
-// 		console.log("token is fine");
-// 		if(stateDesired == "on") {
-// 			console.log("trying to turn on " + room);
-// 			Test.TurnOnRoomByName(room, function (error) {
-// 				Test.GWEnd();
-// 			});
-// 		} else {
-// 			console.log("trying to turn off " + room);
-// 			Test.TurnOffRoomByName(room, function (error) {
-// 				Test.GWEnd();
-// 			});
-// 		}
-// 	} else {
-// 		console.log("There was an issue initializing the token");
-// 	}
-// });
-
 // TODO: brightness
 
-//TODO if above code not working, uncomment this block and try
 Test.Init(function (error) {
 	if (!error) {
 		console.log("token is fine");
