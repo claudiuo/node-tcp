@@ -16,3 +16,5 @@ node_modules/**
 *events.txt
 *train*.json
 *openweather*http*.json
+*.pem
+notes.txt

@@ -1,3 +1,5 @@
+process.chdir(__dirname);
+
 var TCPConnected = require('connectedbytcp');
 
 Test = new TCPConnected("192.168.1.61");
